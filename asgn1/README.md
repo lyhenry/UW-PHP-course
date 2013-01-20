@@ -8,3 +8,4 @@ Vehicle Implementation
 The files in this directory implement a set of classes that can be used 
 to create vehicle objects, and an interface that defines required methods.
 
+Example code can be found in demo.php.
