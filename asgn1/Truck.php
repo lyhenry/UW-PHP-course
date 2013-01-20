@@ -2,6 +2,8 @@
 
     /**
     * Class to represent a truck
+    * Inherits from class Vehicle
+    * Implements interface VehicleInterface
     */
     class Truck extends Vehicle implements VehicleInterface
     {

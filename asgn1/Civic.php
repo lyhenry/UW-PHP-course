@@ -3,11 +3,12 @@
     /**
      * Class to represent a Civic car
      * Inherits from class Car
+     * Implements interface VehicleInterface
      */
      class Civic extends Car implements VehicleInterface
      {
         /**
-         * make and model
+         * Class attributes make and model
          */
         public $_make = 'Honda';
         public $_model = 'Civic';

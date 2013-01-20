@@ -3,6 +3,7 @@
     /**
      * Class to represent a Chevrolet Silverado truck
      * Inherits from class Truck
+     * Implements interface VehicleInterface
      */
      class Silverado extends Truck implements VehicleInterface
      {

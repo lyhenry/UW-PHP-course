@@ -2,11 +2,13 @@
 
     /**
     * Class to represent a car
+    * Inherits from class Vehicle
+    * Implements interface VehicleInterface
     */
     class Car extends Vehicle implements VehicleInterface
     {
         /**
-         * Class variable model
+         * Class attributes make and model
          */
         public $_make = 'Generic';
         public $_model = 'Car';
