@@ -10,7 +10,7 @@
         /**
          * Class variable style
          */
-        public $_style = "Hatchback";
+        public $_style = 'Hatchback';
 
         /**
          * Set parent class variable '_numberOfDoors'

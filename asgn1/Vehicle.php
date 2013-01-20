@@ -1,7 +1,7 @@
 <?php
 
     /**
-     * Abstract class to represent vehicle
+     * Abstract class to represent a vehicle
      */
     abstract class Vehicle
     {
@@ -57,7 +57,6 @@
          * @return int
          */
         abstract public function getNumberOfDoors();
-
     }
 
 ?>

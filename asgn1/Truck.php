@@ -9,8 +9,8 @@
         /**
          * Class variables make and  model
          */
-        public $_make = "Generic";
-        public $_model = "Truck";
+        public $_make = 'Generic';
+        public $_model = 'Truck';
 
         /**
          * Method setYear

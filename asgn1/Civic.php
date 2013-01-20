@@ -9,8 +9,8 @@
         /**
          * make and model
          */
-        public $_make = "Honda";
-        public $_model = "Civic";
+        public $_make = 'Honda';
+        public $_model = 'Civic';
 
         /**
          * Set parent class variable '_numberOfDoors'

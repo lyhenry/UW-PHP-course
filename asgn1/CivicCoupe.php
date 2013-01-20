@@ -9,7 +9,7 @@
         /**
          * Class variable style
          */
-        public $_style = "Coupe";
+        public $_style = 'Coupe';
 
         /**
          * Set parent class variable '_numberOfDoors'

@@ -8,8 +8,8 @@
         /**
          * Class variable model
          */
-        public $_make = "Generic";
-        public $_model = "Car";
+        public $_make = 'Generic';
+        public $_model = 'Car';
 
         /**
          * Method setYear

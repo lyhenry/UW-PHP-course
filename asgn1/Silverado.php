@@ -9,8 +9,8 @@
         /**
          * Class variable style
          */
-        public $_make = "Chevrolet";
-        public $_model = "Silverado";
+        public $_make = 'Chevrolet';
+        public $_model = 'Silverado';
 
         /**
          * Set parent class variable '_numberOfDoors'
@@ -19,7 +19,8 @@
 
         function __construct() {
              print '<p>Congratulations on your new '
-                .$this->getName().'!!</p>';
+                .$this->getName()
+                .'!</p>';
         }
 
         /**
