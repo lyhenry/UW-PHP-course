@@ -31,7 +31,7 @@
 
         /**
          * Method getName
-         * @return string
+         * @return string consisting of make and model
          */
         public function getName() {
             return $this->_make.' '.$this->_model;
@@ -47,13 +47,11 @@
 
         /**
          * Interface method honk
-         * @return empty string
+         * @return empty string for this class
          */
         public function honk() {
             return '';
         }
-
-
     }
 
 ?>

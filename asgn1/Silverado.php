@@ -18,6 +18,11 @@
          */
         public $_numberOfDoors = 2;
 
+        /**
+         * Constructor method
+         * Prints a stings on object creation containing info
+         *  for this specific class
+         */
         function __construct() {
              print '<p>Congratulations on your new '
                 .$this->getName()
@@ -26,7 +31,7 @@
 
         /**
          * Method getName
-         * @return string
+         * @return string consisting of make and model
          */
         public function getName() {
             return $this->_make.' '.$this->_model;
