@@ -10,7 +10,7 @@
 
 <?php
     function __autoload ($class) {
-        require($class . '.php'); 
+        require('Src/' . $class . '.php'); 
     }
 
     // Create a new Car
