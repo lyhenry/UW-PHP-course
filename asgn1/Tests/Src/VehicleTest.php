@@ -8,6 +8,21 @@ class VehicleTest extends PHPUnit_Framework_TestCase
     {
         echo "this is test_getYear";
     }
+
+    public function test_setYear()
+    {
+        echo "this is test_setYear";
+    }
+
+    public function test_getName()
+    {
+        echo "this is test_getName";
+    }
+
+    public function test_getNumberOfDoors()
+    {
+        echo "this is test_getNumberOfDoors";
+    }
 }
 
 ?>

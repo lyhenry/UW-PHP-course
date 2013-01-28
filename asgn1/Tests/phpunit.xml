@@ -1,0 +1,17 @@
+<phpunit>
+  <testsuites>
+    <testsuite name="Vehicle">
+      <directory>Src</directory>
+    </testsuite>
+    <testsuite name="Car">
+      <file>Tests/Src/CarTest.php</file>
+      <file>Tests/Src/CivicTest.php</file>
+      <file>Tests/Src/CivicCoupeTest.php</file>
+      <file>Tests/Src/CivicHatchbackTest.php</file>
+    </testsuite>
+    <testsuite name="Truck">
+      <file>Tests/Src/TruckTest.php</file>
+      <file>Tests/Src/SilveradoTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
