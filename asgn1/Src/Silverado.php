@@ -1,11 +1,12 @@
 <?php
+    namespace NS_Silverado;
 
     /**
      * Class to represent a Chevrolet Silverado truck
      * Inherits from class Truck
      * Implements interface VehicleInterface
      */
-     class Silverado extends Truck implements VehicleInterface
+     class Silverado extends \NS_Truck\Truck implements \NS_VehicleInterface\VehicleInterface
      {
         /**
          * Class variable style

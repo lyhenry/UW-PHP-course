@@ -1,9 +1,12 @@
 <?php
-interface VehicleInterface
-{
-    /***
-     * Interface method honk()
-     */
+    namespace NS_VehicleInterface;
 
-     public function honk();
-}
+    interface VehicleInterface
+    {
+        /***
+         * Interface method honk()
+         */
+
+         public function honk();
+    }
+?>

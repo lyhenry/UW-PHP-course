@@ -1,11 +1,12 @@
 <?php
+    namespace NS_Truck;
 
     /**
     * Class to represent a truck
     * Inherits from class Vehicle
     * Implements interface VehicleInterface
     */
-    class Truck extends Vehicle implements VehicleInterface
+    class Truck extends \NS_Vehicle\Vehicle implements \NS_VehicleInterface\VehicleInterface
     {
 
         /**

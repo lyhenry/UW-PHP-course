@@ -1,11 +1,12 @@
 <?php
+    namespace NS_Car;
 
     /**
     * Class to represent a car
     * Inherits from class Vehicle
     * Implements interface VehicleInterface
     */
-    class Car extends Vehicle implements VehicleInterface
+    class Car extends \NS_Vehicle\Vehicle implements \NS_VehicleInterface\VehicleInterface
     {
         /**
          * Class attributes make and model

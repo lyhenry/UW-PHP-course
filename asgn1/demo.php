@@ -9,13 +9,11 @@
 <h2>This file contains example code that exercises the Vehicle API.</h2>
 
 <?php
-    function __autoload ($class) {
-        require('Src/' . $class . '.php'); 
-    }
+    require('Bootstrap.php'); 
 
     // Create a new Car
     print '<h3>Exercise the Car Class</h3>';
-    $myCar = new Car();
+    $myCar = new NS_Car\Car();
     $myCar->setYear('1995');
     print '<p>I just bought a new '
         .$myCar->getYear().' '
@@ -25,7 +23,7 @@
 
     // Create a new Truck
     print '<h3>Exercise the Truck Class</h3>';
-    $myTruck = new Truck();
+    $myTruck = new NS_Truck\Truck();
     $myTruck->setYear('1965');
     print '<p>I just bought a new '
         .$myTruck->getYear().' '
@@ -35,7 +33,7 @@
 
     // Create a new Civic
     print '<h3>Exercise the Civic Class</h3>';
-    $myCivic = new Civic();
+    $myCivic = new NS_Civic\Civic();
     $myCivic->setYear('2000');
     print '<p>I just bought a new '
         .$myCivic->getYear().' '
@@ -45,7 +43,7 @@
 
     // Create a new Civic Coupe
     print '<h3>Exercise the Civic Coupe Class</h3>';
-    $myCivicCoupe = new CivicCoupe();
+    $myCivicCoupe = new NS_CivicCoupe\CivicCoupe();
     $myCivicCoupe->setYear('2001');
     print '<p>I just bought a new '
         .$myCivicCoupe->getNumberOfDoors().' door '
@@ -56,7 +54,7 @@
 
     // Create a new Civic Hatchback
     print '<h3>Exercise the Civic Hatchback Class</h3>';
-    $myCivicHatchback = new CivicHatchback();
+    $myCivicHatchback = new NS_CivicHatchback\CivicHatchback();
     $myCivicHatchback->setYear('2011');
     print '<p>I just bought a new '
         .$myCivicHatchback->getNumberOfDoors().' door '
@@ -67,7 +65,7 @@
 
     // Create a new Silverado
     print '<h3>Exercise the Silverado Class</h3>';
-    $mySilverado = new Silverado();
+    $mySilverado = new NS_Silverado\Silverado();
     $mySilverado->setYear('2010');
     print '<p>I just bought a new '
         .$mySilverado->getNumberOfDoors().' door '

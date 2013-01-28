@@ -1,4 +1,5 @@
 <?php
+    namespace NS_Vehicle;
 
     /**
      * Abstract class to represent a vehicle

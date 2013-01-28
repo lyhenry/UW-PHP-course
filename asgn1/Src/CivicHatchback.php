@@ -1,10 +1,11 @@
 <?php
+    namespace NS_CivicHatchback;
 
     /**
      * Class to represent a Civic Hatchback car
      * Inherits from class Civic
      */
-     class CivicHatchback extends Civic
+     class CivicHatchback extends \NS_Civic\Civic
      {
 
         /**
