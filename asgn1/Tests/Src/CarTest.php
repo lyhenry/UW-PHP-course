@@ -4,30 +4,27 @@
 
 class CarTest extends PHPUnit_Framework_TestCase
 {
-    public function test_getYear()
+    public function testCar()
     {
-        echo "this is test_getYear";
+        $car = new NS_Car\Car();
+        $this->assertObjectHasAttribute('_make', $car);
+        $this->assertObjectHasAttribute('_model', $car);
+ 
+        return $car;
     }
-
-    public function test_setYear()
+ 
+    /**
+     * @depends testCar
+     */
+    public function test_setYear($car)
     {
-        echo "this is test_setYear";
+        $testYear = '1995';
+        $car->setYear($testYear);
+        $this->assertEquals($testYear, $car->getYear());
+ 
+        return $car;
     }
-
-    public function test_getName()
-    {
-        echo "this is test_getName";
-    }
-
-    public function test_getNumberOfDoors()
-    {
-        echo "this is test_getNumberOfDoors";
-    }
-
-    public function test_honk()
-    {
-        echo "this is test_honk";
-    }
+ 
 }
 
 ?>

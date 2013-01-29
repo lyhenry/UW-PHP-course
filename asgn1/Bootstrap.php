@@ -1,5 +1,8 @@
 <?php
 
+    // modify the include path
+    //set_include_path('Src');
+
     // Require class files
     require('Src/Vehicle.php');
     require('Src/VehicleInterface.php');
