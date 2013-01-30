@@ -46,3 +46,11 @@ phpunit --debug -c Tests/phpunit.xml --verbose --testsuite Truck
 
 phpunit --debug -c Tests/phpunit.xml --verbose --coverage-html coverage_report --testsuite Vehicle
 
+Outstanding Issues
+==================
+
+a) The Bootstrap.php file contains a list of 'require' statements. I think
+there is a more dynamic way to do this.
+
+b) I'm not sure how to test the abstract public methods in Vehicle.php and 
+VehicleInterface.php.
