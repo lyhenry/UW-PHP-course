@@ -37,15 +37,15 @@
          protected $_model;
 
          /**
+          * Set the year of the vehicle
+          */
+         abstract public function setYear($year);
+
+         /**
           * Return the year of the vehicle
           * @return int
           */
          abstract public function getYear();
-
-         /**
-          * Set the year of the vehicle
-          */
-         abstract public function setYear($year);
 
         /**
          * Method getName

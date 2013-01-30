@@ -4,30 +4,55 @@
 
 class CivicTest extends PHPUnit_Framework_TestCase
 {
-    public function test_getYear()
-    {
-        echo "this is test_getYear";
-    }
 
-    public function test_setYear()
-    {
-        echo "this is test_setYear";
-    }
+    private $_testYear = '1995';
+    private $_name = 'Honda Civic';
 
-    public function test_getName()
+    public function testCivic()
     {
-        echo "this is test_getName";
+        $car = new NS_Civic\Civic();
+        $this->assertObjectHasAttribute('_make', $car);
+        $this->assertObjectHasAttribute('_model', $car);
+        return $car;
     }
-
-    public function test_getNumberOfDoors()
+ 
+    /**
+     * @depends testCivic
+     */
+    public function test_set_Year($car)
     {
-        echo "this is test_getNumberOfDoors";
+        $car->setYear($this->_testYear);
+        $this->assertEquals($this->_testYear, $car->getYear());
+        return $car;
     }
-
-    public function test_honk()
+ 
+    /**
+     * @depends testCivic
+     */
+    public function test_getName($car)
     {
-        echo "this is test_honk";
+        $this->assertEquals($this->_name, $car->getName());
+        return $car;
     }
+ 
+    /**
+     * @depends testCivic
+     */
+    public function test_getNumberOfDoors($car)
+    {
+        $this->assertNull($car->getNumberOfDoors());
+        return $car;
+    }
+ 
+    /**
+     * @depends testCivic
+     */
+    public function test_honk($car)
+    {
+        $this->assertEquals('honk honk!', $car->honk());
+        return $car;
+    }
+ 
 }
 
 ?>

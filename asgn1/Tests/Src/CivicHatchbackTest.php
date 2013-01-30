@@ -1,23 +1,25 @@
 <?php
 
-// Tests for NS_Car
+// Tests for NS_CivicHatchback
 
-class CarTest extends PHPUnit_Framework_TestCase
+class CivicHatchbackTest extends PHPUnit_Framework_TestCase
 {
 
     private $_testYear = '1995';
-    private $_name = 'Generic Car';
+    private $_name = 'Honda Civic Hatchback';
+    private $_numberOfDoors = 3;
 
-    public function testCar()
+    public function testCivicHatchback()
     {
-        $car = new NS_Car\Car();
+        $car = new NS_CivicHatchback\CivicHatchback();
         $this->assertObjectHasAttribute('_make', $car);
         $this->assertObjectHasAttribute('_model', $car);
+        $this->assertObjectHasAttribute('_style', $car);
         return $car;
     }
  
     /**
-     * @depends testCar
+     * @depends testCivicHatchback
      */
     public function test_set_Year($car)
     {
@@ -27,7 +29,7 @@ class CarTest extends PHPUnit_Framework_TestCase
     }
  
     /**
-     * @depends testCar
+     * @depends testCivicHatchback
      */
     public function test_getName($car)
     {
@@ -36,20 +38,21 @@ class CarTest extends PHPUnit_Framework_TestCase
     }
  
     /**
-     * @depends testCar
+     * @depends testCivicHatchback
      */
     public function test_getNumberOfDoors($car)
     {
-        $this->assertNull($car->getNumberOfDoors());
+        $this->assertEquals($this->_numberOfDoors, $car->_numberOfDoors);
+        $this->assertEquals($this->_numberOfDoors, $car->getNumberOfDoors());
         return $car;
     }
  
     /**
-     * @depends testCar
+     * @depends testCivicHatchback
      */
     public function test_honk($car)
     {
-        $this->assertEmpty($car->honk());
+        $this->assertEquals('honk honk!', $car->honk());
         return $car;
     }
  

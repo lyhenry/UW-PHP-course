@@ -1,23 +1,24 @@
 <?php
 
-// Tests for NS_Truck
+// Tests for NS_Silverado
 
-class TruckTest extends PHPUnit_Framework_TestCase
+class Silverado extends PHPUnit_Framework_TestCase
 {
 
     private $_testYear = '1995';
-    private $_name = 'Generic Truck';
+    private $_name = 'Chevrolet Silverado';
+    private $_numberOfDoors = 2;
 
-    public function testTruck()
+    public function testSilverado()
     {
-        $truck = new NS_Truck\Truck();
+        $truck = new NS_Silverado\Silverado();
         $this->assertObjectHasAttribute('_make', $truck);
         $this->assertObjectHasAttribute('_model', $truck);
         return $truck;
     }
  
     /**
-     * @depends testTruck
+     * @depends testSilverado
      */
     public function test_set_Year($truck)
     {
@@ -27,7 +28,7 @@ class TruckTest extends PHPUnit_Framework_TestCase
     }
  
     /**
-     * @depends testTruck
+     * @depends testSilverado
      */
     public function test_getName($truck)
     {
@@ -36,20 +37,20 @@ class TruckTest extends PHPUnit_Framework_TestCase
     }
  
     /**
-     * @depends testTruck
+     * @depends testSilverado
      */
     public function test_getNumberOfDoors($truck)
     {
-        $this->assertNull($truck->getNumberOfDoors());
+        $this->assertEquals($this->_numberOfDoors, $truck->getNumberOfDoors());
         return $truck;
     }
  
     /**
-     * @depends testTruck
+     * @depends testSilverado
      */
     public function test_honk($truck)
     {
-        $this->assertEmpty($truck->honk());
+        $this->assertEquals('oogah oogah!', $truck->honk());
         return $truck;
     }
  
