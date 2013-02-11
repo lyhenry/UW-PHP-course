@@ -2,17 +2,14 @@
     namespace NS_Connection;
 
     /**
-    */
+     * Class to provide database helper functions  
+     */
     class Connection
     {
-
-        /**
-         * Class attributes 
-         */
-        
         /**
          * Constructor method
-         * Takes an array of database parameters
+         * Takes an array of database parameters to use for 
+         * database initialization
          */
         function __construct($params) {
             $this->_host = $params["host"];
@@ -30,9 +27,9 @@
             $this->_db = new \mysqli($this->_host, $this->_username, 
                     $this->_password, $this->_dbname);
             if ($this->_db->connect_errno) {
-                printf("Connect failed: %s\n", $this->_db->connect_error);
-                //FIXME: throw exception
-                exit();
+                $error = sprintf("Connect failed: %s\n", 
+                        $this->_db->connect_error);
+                throw new \RuntimeException($error);
             }
             return $this->_db;
         }
@@ -45,9 +42,8 @@
         public function insert($query) {
             $result = $this->_db->query($query);
             if ($this->_db->error) {
-                printf("Insert failed: %s\n", $this->_db->error);
-                exit();
-                //FIXME: throw exception
+                $error = sprintf("Insert failed: %s\n", $this->_db->error);
+                throw new \Exception($error);
             }
             return $this->_db->insert_id;
         }
@@ -60,12 +56,12 @@
         public function select($query, $verbose = False) {
             $result = $this->_db->query($query);
             if ($this->_db->error) {
-                printf("Select failed: %s\n", $this->_db->error);
-                exit();
-                //FIXME: throw exception
+                $error = sprintf("Select failed: %s\n", $this->_db->error);
+                throw new \Exception($error);
             }
-
-            if($verbose) {
+            
+            // Print results in a readable format
+            if ($verbose) {
                 if ($result->num_rows > 0) {
                     while($rows = $result->fetch_assoc()) {
                         printf("%d: %s %s\n", stripslashes($rows['id']),
@@ -86,9 +82,8 @@
         public function delete($query) {
             $result = $this->_db->query($query);
             if ($this->_db->error) {
-                printf("Delete failed: %s\n", $this->_db->error);
-                exit();
-                //FIXME: throw exception
+                $error = sprintf("Delete failed: %s\n", $this->_db->error);
+                throw new \Exception($error);
             }
             return $result;
         }
@@ -100,9 +95,8 @@
         public function update($query) {
             $result = $this->_db->query($query);
             if ($this->_db->error) {
-                printf("Update failed: %s\n", $this->_db->error);
-                exit();
-                //FIXME: throw exception
+                $error = sprintf("Update failed: %s\n", $this->_db->error);
+                throw new \Exception($error);
             }
             return $result;
         }
@@ -115,9 +109,8 @@
             $query = "SELECT count(*) from User";
             $result = $this->_db->query($query);
             if ($this->_db->error) {
-                printf("Query failed: %s\n", $this->_db->error);
-                exit();
-                //FIXME: throw exception
+                $error = sprintf("Query failed: %s\n", $this->_db->error);
+                throw new \Exception($error);
             }
             while($row = $result->fetch_assoc()) {
                 $count = stripslashes($row['count(*)']);
